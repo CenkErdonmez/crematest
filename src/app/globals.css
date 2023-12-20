@@ -1,0 +1,248 @@
+@tailwind base;
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+  font-family: "Chalkduster";
+  src: url("https://db.onlinewebfonts.com/t/bd9805cba4fdbd10e6f9d097dab9225f.eot");
+  src: url("https://db.onlinewebfonts.com/t/bd9805cba4fdbd10e6f9d097dab9225f.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/bd9805cba4fdbd10e6f9d097dab9225f.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/bd9805cba4fdbd10e6f9d097dab9225f.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/bd9805cba4fdbd10e6f9d097dab9225f.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/bd9805cba4fdbd10e6f9d097dab9225f.svg#Chalkduster")format("svg");
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Raleway Medium'), local('Raleway-Medium'), url(https://fonts.gstatic.com/s/raleway/v11/CcKI4k9un7TZVWzRVT-T8_k_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+.font-raleway {
+  font-family: 'Raleway', sans-serif !important ;
+}
+
+.font-chalkduster {
+  font-family: "Chalkduster";
+}
+
+
+html,
+body,
+:root {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #444;
+}
+
+label {
+  color: #555;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 1px;
+}
+
+#banner {
+  background-image: url("../../public/assets/img/inner-banner.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  top: -100px;
+
+  padding-top: 240px;
+}
+
+#banner h1 {
+  font-family: "Chalkduster", sans-serif !important;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#banner p {
+  display: block;
+  color: #d3ac23;
+  font-size: 24px;
+  font-family: "Chalkduster";
+  font-weight: 300;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.counter-bg {
+  background-image: url("../../public/assets/img/counter.jpg");
+}
+
+.bottom-dotted {
+  border-bottom: 1px dotted #eee;
+}
+
+
+
+.remove-arrow::-webkit-inner-spin-button,
+.remove-arrow::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.remove-arrow {
+  -moz-appearance: textfield;
+}
+
+.fancy-title {
+  background: url("../../public/assets/img/dotted.png") repeat-x center;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.clients-table {
+  border-collapse: collapse;
+  border-style: hidden;
+}
+
+table td {
+  border-style: dotted;
+  border-width: 1px;
+  border-color: grey;
+}
+
+.client-swiper .swiper-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+::selection {
+  background: #b11a17;
+  color: #fff;
+  text-shadow: none;
+}
+
+@keyframes buttonAnimation {
+  from {
+    transform: translateX(-200px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.button-animation {
+  animation: buttonAnimation 1s ease-in-out;
+}
+
+@keyframes services-left {
+  from {
+    transform: translateX(-200px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes services-right {
+  from {
+    transform: translateX(200px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes services-center {
+  0% {
+    transform: scaleX(1);
+  }
+
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.left-animation {
+  animation: services-left 1s ease-in-out;
+}
+
+.right-animation {
+  animation: services-right 1s ease-in-out;
+}
+
+.center-animation {
+  animation: services-center 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(30px);
+    opacity: 0.5;
+  }
+}
+
+.down-animation {
+  animation: fadeInDown ease-in-out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}

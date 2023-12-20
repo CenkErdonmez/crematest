@@ -1,0 +1,6 @@
+export {default as HomeSwiper} from './HomeSwiper'
+export {default as HomeQuote} from './HomeQuote'
+export {default as HomeServices} from './HomeServices'
+export {default as HomePortfolio} from './HomePortfolio'
+export {default as HomeComments} from './HomeComments'
+export {default as HomeClients} from './HomeClients'
